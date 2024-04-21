@@ -1,11 +1,10 @@
 from transformers import pipeline, Pipeline
-
 from constants import DEFAULT_SUMMARY_MIN_LENGTH, DEFAULT_SUMMARY_MAX_LENGTH
 
 
 class Summarizer:
     model: str = "facebook/bart-large-cnn"
-    summarizer: Pipeline = None
+    summarizer = None
 
     def __init__(self, model: str = "facebook/bart-large-cnn"):
         self.model = model

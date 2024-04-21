@@ -7,7 +7,7 @@ from constants import DEFAULT_SUMMARY_MIN_LENGTH, DEFAULT_SUMMARY_MAX_LENGTH
 summarize_bp = Blueprint('summarize', __name__)
 
 
-@summarize_bp.get("/summary")
+@summarize_bp.post("/summary")
 def summarize_text():
     data = request.get_json()
     summarizer = Summarizer()
